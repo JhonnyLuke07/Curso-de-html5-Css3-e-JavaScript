@@ -1,22 +1,70 @@
-<h1>Google Glass</h1>
-<h2>revolução do Google está chegando</h2>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css" >
+    <link rel="stylesheet" href="_css/specs.css" >
+</head>
+<script>
+    function mudaFoto (foto)
+    {
+        document.getElementById ("icone").src = foto;
 
-[AQUI ENTRA UMA FOTO]
+    }
+</script>
+<body>
+<div id="interface">
+<header id="cabecalho" >
+<hgroup>
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+    <img id="icone" src="_imagens/especificacoes.png"/>
+<nav id="menu">
+    <ul>
+        <h1>Menu Principal</h1>
+         <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html" >Home</a></li>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+         <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
 
-Glass > Especificações
-Raio-X no Google Glass
-por João Roberto
-Atualizado em 26/Agosto/2024
+         <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+
+         <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+
+         <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+
+    </ul>        
+</nav>
+</header>
+
+<section id="corpo-full">
+    jkjkuijkuio
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Glass > Especificações</h3>
+                <h1>Raio-X no Google Glass</h1>
+                <h2>por João Roberto</h2>
+                <h3>Atualizado em 26/Agosto/2024</h3>
+            </hgroup>
+        </header>
 
 <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
-[AQUI ENTRA UMA IMAGEM]
+        <section>
+            <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa">
+            <map name="meumapa">
+                <area shape="poly" coords="183,218,264,208,267,244,186,255" href="google-glass.html#tela"target="janela">
+                <area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela">
+                <area shape="circle" coords="73,52,12" href="google-glass.html#bateria" target="janela">
+                <area shape="poly" coords="27,143,81,216,83,255,25,168" href="google-glass.html#sensores"target="janela">
+            </map>
+            <iframe src="google-glass.html" name="janela" id="frame-spec" class="invisible-scrollbar"></iframe>
+        </section>
+
+    </article>        
+</section>
 
 Copyright &copy; 2024 - by João Roberto
