@@ -1,47 +1,107 @@
-<h1>Google Glass</h1>
-<h2>revolução do Google está chegando</h2>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css" >
+    <link rel="stylesheet" href="_css/form.css" >
+</head>
+<script>
+    function mudaFoto (foto)
+    {
+        document.getElementById ("icone").src = foto;
 
-[AQUI ENTRA UMA FOTO]
+    }
+</script>
+<script>
+    function calc_total() {
+        var qtd = parseInt
+        (document.getElementById('cQtd').value);
+        tot = qtd * 1500;
+        document.getElementById('cTot').value = tot;
+    }
+</script>
+<body>
+<div id="interface">
+<header id="cabecalho" >
+<hgroup>
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+    <img id="icone" src="_imagens/fotos.png"/>
+<nav id="menu">
+    <ul>
+        <h1>Menu Principal</h1>
+         <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html" >Home</a></li>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+         <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+         <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+         <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+         <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+    </ul>        
+</nav>
+</header>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por João Roberto</h2>
+                <h3>Atualizado em 26/Agosto/2024</h3>
+            </hgroup>
+        </header>
 
 
-[BOTÃO ENVIAR]
+<form oninput="calc_total();"><fieldset id="usuario"><legend>Identificação do Usuário</legend>
+    <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" placeholder="Nome completo"></p>
+    <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" placeholder="Senha"></p>
+    <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" placeholder="Email"></p>
+    <fieldset id="sexo"><legend>Sexo</legend>
+        <input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label>
+        <input type="radio" name="tSexo" id="cFem"><label for="cFem"> Feminino</label> </fieldset>
+    <p>Data de Nascimento:<input type="date" name="tNasc" id="cNasc"></legend>
+</fieldset>
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+
+<fieldset id="enderco"><legend> Endereço do Usuário</legend>
+    <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" placeholder="Rua, Av..."></p>
+    <p><label for="cNum"> Número:</label><input type="number" name="tNum" id="cNum" placeholder="Número"></p>
+    <p><label for="cEst"> Estado:</label><input type="text" name="tEst" id="cEst" placeholder="Estado"> </p>
+    <p><label for="cCid"> Cidade:</label><input type="text" name="tCid" id="cCid" placeholder="Cidade"></p>
+</fieldset>
+
+<fieldset id="mensagem"><legend> Mensagem do Usuário</legend>
+    <p><label for="cUrg"> Grau de Urgência:</label><input type="range" name="tUrg" id="cUrg"></p>
+    <p><label for="cMsg"> Mensagem:</label><input type="text" name="tMsg" id="cMsg" placeholder="Deixe aqui sua mensagem"></p>
+</fieldset>
+
+<fieldset id="pedido"><legend> Quero um Google Glass</legend>
+    <p><input type="checkbox" name="tPed" id="cPed"><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor"> Cor:</label><input type="color" name="tCor" id="cCor"></p>
+    <p><label for="cQtd"> Quantidade:</label><input type="number" name="tQtd" id="cQtd"></p>
+    <p><label for="cTot"> Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
+</fieldset>
+
+<input type="image" src="_imagens/botao-enviar.png">
+
+
+
+</form>
+
+
+<footer id="rodape" >
+
+    <p>&copy;Copyright 2024 - by João Roberto <br/> <a href="https://www.facebook.com/profile.php?id=100061430424327&sk=grid">facebook</a> |
+    <a href="https://github.com/JhonnyLuke07">Github</a></p>
+
+</footer> 
+</div>
+</body>
+</html>
